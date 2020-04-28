@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-button (click)="getLocalWeather()">
+        <ion-icon slot="icon-only" name="locate"></ion-icon>
+      </ion-button>
+      <ion-button (click)="updatePage()">
+        <ion-icon slot="icon-only" name="refresh"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Weather App (Ionic 4)
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form (ngSubmit)="setPostalCode()">
+    <ion-item>
+      <ion-label>Enter a Postal Code:</ion-label>
+      <ion-input type="text" [(ngModel)]="searchInput" name="PostalCode" placeholder="Postal Code"></ion-input>
+    </ion-item>
+    <ion-button type="submit" expand="block">
+      <ion-icon slot="start" name="locate"></ion-icon>
+      Get Weather for Postal Code
+    </ion-button>
+  </form>
+
+  <ion-segment [(ngModel)]="displayMode">
+    <ion-segment-button value="current">
+      Current
+    </ion-segment-button>
+    <ion-segment-button value="forecast">
+      Forecast
+    </ion-segment-button>    
+  </ion-segment>
+
+  <div [ngSwitch]="displayMode">
+
+    <ion-list no-lines *ngSwitchCase="'current'">
+      <!--show this if there are no items in the list-->
+      <ion-item [hidden]="currentItems.length > 0">
+        <p><strong>Weather data is not available</strong></p>
+      </ion-item>
+      <!--Display the current conditions data we have -->
+      <ion-item *ngFor="let c_item of currentItems">
+        <p><strong>{{c_item.name}}:</strong> {{c_item.value}}</p>
+      </ion-item>
+    </ion-list>
+
+    <ion-list inset *ngSwitchCase="'forecast'">
+      <ion-item text-class="ion-text-wrap" lines="none">
+        {{ forecastItems.length ? 'Tap an item to view the forecast for the selected period.': 'Forecast data is not available at this time.' }}
+      </ion-item>
+      <ion-item lines="full" *ngFor="let item of forecastItems" (click)="viewForecast(item)">
+        <ion-icon name="time" slot="start"></ion-icon>
+        {{item.period}}
+      </ion-item>
+    </ion-list>
+
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>By <a href="https://johnwargo.com" target="_blank">John M. Wargo</a></ion-title>
+  </ion-toolbar>  
+</ion-footer>

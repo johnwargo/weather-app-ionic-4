@@ -1,0 +1,11 @@
+{
+  "appId": "com.johnwargo.weatherappionic4",
+  "appName": "WeatherAppIonic4",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {},
+  "android": {
+    "allowMixedContent": true
+  }
+}
