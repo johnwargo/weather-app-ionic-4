@@ -2,11 +2,6 @@
 
 by John M. Wargo
 
-## Remaining Tasks
-
-+ take screen shots
-+ publish public repo
-
 ## Introduction
 
 This is an Ionic 4/Capacitor version of the [TACO Weather App](http://taco.visualstudio.com/en-us/docs/vs-taco-2017-first-app/) solution. I created the [Ionic 2/Cordova](https://github.com/microsoft/cordova-samples/tree/master/weather-app-ionic2) version of this app while I worked on the docs for [Visual Studio 2017 Tools for Apache Cordova (TACO)](https://visualstudio.microsoft.com/vs/features/cordova/). That app hasn't been updated in a while, so I thought I'd give it a refresh. This version of the app is an Ionic Capacitor app; as market interest in Apache Cordova wanes, Capacitor is a robust alternative.
