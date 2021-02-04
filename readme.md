@@ -36,3 +36,9 @@ When providing a forecast, the Open Weather API returns an array representing fo
 Tap on a period to open a page containing the detailed weather forecast for the selected period as shown in the following figure.
 
 ![Application Forecast Details](screenshots/figure-03.png)
+
+***
+
+You can find information on many different topics on my [personal blog](http://www.johnwargo.com). Learn about all of my publications at [John Wargo Books](http://www.johnwargobooks.com).
+
+If you find this code useful and feel like thanking me for providing it, please consider <a href="https://www.buymeacoffee.com/johnwargo" target="_blank">Buying Me a Coffee</a>, or making a purchase from [my Amazon Wish List](https://amzn.com/w/1WI6AAUKPT5P9).
